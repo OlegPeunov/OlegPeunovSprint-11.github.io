@@ -1,3 +1,11 @@
+import Api from './api';
+import Card from './card';
+import CardList from './cardList';
+import FormValidator from './formValidator';
+import Popup from './popup';
+import UserInfo from './userInfo';
+import './pages/index.css';
+
 (function(){
 
 const container = document.querySelector('.root');
