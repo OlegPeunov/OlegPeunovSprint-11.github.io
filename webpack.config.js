@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV === 'development' ? 'http://nomoreparties.co/cohort12' : 'https://nomoreparties.co/cohort12';
 
 
 module.exports = {
@@ -26,7 +26,12 @@ module.exports = {
             test: /\.css$/i,
             use: [
                 (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                'css-loader', 
+                {
+                    loader:'css-loader',
+                    options: {
+                        importLoaders: 2
+                    } 
+                }, 
                 'postcss-loader'
             ]
         },

@@ -26,6 +26,7 @@ const userValidator = new FormValidator(editForm);
 const cardValidator = new FormValidator(form);
 const userInfo = new UserInfo(userName, userJob, userPhoto);
 
+
 const newApi = new Api({
   url: 'https://nomoreparties.co/cohort12',
   authorization: '61bfbbef-2f0f-4ba0-a4c0-c034d01c7f11'
