@@ -28,7 +28,7 @@ const userInfo = new UserInfo(userName, userJob, userPhoto);
 
 
 const newApi = new Api({
-  url: 'https://nomoreparties.co/cohort12',
+  url: `${(NODE_ENV==='production') ? 'http://nomoreparties.co/cohort12' : 'https://nomoreparties.co/cohort12'}`,
   authorization: '61bfbbef-2f0f-4ba0-a4c0-c034d01c7f11'
 })
 
