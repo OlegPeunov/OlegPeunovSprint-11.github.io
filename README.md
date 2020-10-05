@@ -14,6 +14,6 @@
 
 
 
-###[Посмотреть проект>>>]( "https://olegpeunov.github.io/OlegPeunovSprint-11.github.io/")
+###[Посмотреть проект>>>](https://olegpeunov.github.io/OlegPeunovSprint-11.github.io)
 ***
 Проект создан с помощью следующих технологий: CSS, HTML, GIT, webpack
