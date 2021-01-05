@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img alt="mesto logo" class="logo" src="<%=require('./images/logo.svg').default%>">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -30,7 +30,7 @@
     
     <div class="popup">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" novalidate name="new">
             <input type="text" id="popup-name" name="name" class="popup__input popup__input_type_name" required minlength="2" maxlength="30" placeholder="Название" value="">
@@ -44,7 +44,7 @@
  
     <div class="popup popup-type-edit">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close popup-edit__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-edit__close">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" novalidate name="edit">
             <input type="text" id="edit-name" name="name" class="popup__input popup__input_type_name" required minlength="2" maxlength="30" value="Jacques Cousteau">
@@ -61,13 +61,7 @@
       <img src="./images/close.svg" alt="" class="popupImage__close">
     </div>
   </div>
-  <script src="api.js"></script>
-  <script src="card.js"></script>
-  <script src="cardList.js"></script>
-  <script src="popup.js"></script>
-  <script src="userInfo.js"></script>
-  <script src="formValidator.js"></script>
-  <script src="script.js"></script>
+  <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
   
 </body>
 </html>
